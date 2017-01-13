@@ -4,7 +4,9 @@
   "description": "Stylelint config for Property Sort Ordering based on the SMACSS methodology",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ava": "ava --verbose 'tests/**/*.js'",
+    "lint": "eslint .",
+    "test": "npm run lint && npm run ava"
   },
   "repository": {
     "type": "git",
@@ -17,12 +19,17 @@
     "CSS Property Sort Order",
     "stylelint",
     "stylelint-config",
-    "stylelint-config-property-sort-order-smacss"
+    "stylelint-cogit snfig-property-sort-order-smacss"
   ],
   "author": "Carl Hamilton <info@carlhamilton.co.uk>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/issues"
   },
-  "homepage": "https://github.com/cahamilton/stylelint-config-property-sort-order-smacss#readme"
+  "homepage": "https://github.com/cahamilton/stylelint-config-property-sort-order-smacss#readme",
+  "devDependencies": {
+    "ava": "^0.16.0",
+    "eslint": "^3.10.0",
+    "eslint-config-stylelint": "^5.0.0"
+  }
 }
