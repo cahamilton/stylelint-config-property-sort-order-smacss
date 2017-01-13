@@ -19,7 +19,7 @@
     "CSS Property Sort Order",
     "stylelint",
     "stylelint-config",
-    "stylelint-cogit snfig-property-sort-order-smacss"
+    "stylelint-config-property-sort-order-smacss"
   ],
   "author": "Carl Hamilton <info@carlhamilton.co.uk>",
   "license": "MIT",
