@@ -12,7 +12,7 @@ npm stylelint-config-property-sort-order-smacss --save-dev
 
 To start using this configuration, simply extend this package in your Stylelint configuration.
 
-```json
+```js
 {
   "extends": "stylelint-config-property-sort-order-smacss",
   "rules": {
