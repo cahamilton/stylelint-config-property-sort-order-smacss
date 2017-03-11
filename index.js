@@ -4,7 +4,10 @@ const generate = require("./generate")
 const config = generate(order)
 
 module.exports = {
+  "plugins": [
+    "stylelint-order",
+  ],
   "rules": {
-    "declaration-block-properties-order": config,
+    "order/declaration-block-properties-specified-order": config,
   },
 }
