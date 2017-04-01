@@ -32,7 +32,10 @@
   "devDependencies": {
     "eslint": "^3.10.0",
     "eslint-config-stylelint": "^5.0.0",
-    "stylelint": "^7.9.0",
+    "stylelint": "^7.8.0",
     "tape": "^4.6.3"
+  },
+  "peerDependencies": {
+    "stylelint": "^7.8.0"
   }
 }
