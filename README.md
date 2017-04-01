@@ -5,7 +5,7 @@ Stylelint config for Property Sort Ordering based on the [SMACSS](https://smacss
 ## Installation
 
 ```bash
-npm stylelint-config-property-sort-order-smacss --save-dev
+npm install --save-dev stylelint-config-property-sort-order-smacss
 `````
 
 ## Usage
