@@ -1,7 +1,7 @@
 # stylelint-config-property-sort-order-smacss
 
 [![NPM version](https://img.shields.io/npm/v/stylelint-config-property-sort-order-smacss.svg)](https://www.npmjs.org/package/stylelint-config-property-sort-order-smacss)
-[![NPM Downloads](https://img.shields.io/npm/dm/stylelint-config-property-sort-order-smacss.svg)](https://www.npmjs.org/package/stylelint)
+[![NPM Downloads](https://img.shields.io/npm/dm/stylelint-config-property-sort-order-smacss.svg)](https://www.npmjs.org/package/stylelint-config-property-sort-order-smacss)
 [![Build Status](https://travis-ci.org/cahamilton/stylelint-config-property-sort-order-smacss.svg?branch=master)](https://travis-ci.org/cahamilton/stylelint-config-property-sort-order-smacss)
 
 Stylelint config for Property Sort Ordering based on the [SMACSS](https://smacss.com) methodology.
