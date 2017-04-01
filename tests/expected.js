@@ -1,3 +1,5 @@
+"use strict"
+
 module.exports = [
   "prop1",
   "prop2",

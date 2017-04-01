@@ -1,3 +1,5 @@
+"use strict"
+
 const order = require("css-property-sort-order-smacss")
 const generate = require("./generate")
 
