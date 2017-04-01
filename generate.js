@@ -1,3 +1,5 @@
+"use strict"
+
 module.exports = function (order) {
   let config = []
 
