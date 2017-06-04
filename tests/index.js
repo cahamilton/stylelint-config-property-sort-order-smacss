@@ -20,7 +20,7 @@ test("Stylelint configuration", function (t) {
     config: stylelintConfig,
   }).then(function (output) {
     const actual = output.results[0].warnings[0].text
-    t.equal(actual, "Expected top to come before color (order/declaration-block-properties-specified-order)")
+    t.equal(actual, "Expected \"top\" to come before \"color\" (order/properties-order)")
     t.end()
   }).catch(function (err) {
     t.notOk(err)

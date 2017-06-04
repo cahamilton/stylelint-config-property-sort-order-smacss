@@ -10,6 +10,6 @@ module.exports = {
     "stylelint-order",
   ],
   "rules": {
-    "order/declaration-block-properties-specified-order": config,
+    "order/properties-order": config,
   },
 }
