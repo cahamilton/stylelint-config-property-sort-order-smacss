@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-property-sort-order-smacss",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Stylelint config for Property Sort Ordering based on the SMACSS methodology",
   "main": "index.js",
   "scripts": {
