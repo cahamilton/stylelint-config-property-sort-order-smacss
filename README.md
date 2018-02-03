@@ -26,3 +26,7 @@ To start using this configuration, simply extend this package in your Stylelint 
 ```
 
 For more information on configuring Stylelint, check out the [configuration](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configuration.md) guide. 
+
+## Property Ordering
+
+Refer to [here](https://github.com/cahamilton/css-property-sort-order-smacss/blob/v2.1.1/index.js) for the comprehensive list of property orders. 
