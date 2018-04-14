@@ -4,7 +4,9 @@
   "description": "Stylelint config for Property Sort Ordering based on the SMACSS methodology",
   "main": "index.js",
   "scripts": {
-    "test": "eslint . && tape 'tests/index.js'"
+    "eslint": "eslint .",
+    "tape": "tape 'tests/index.js'",
+    "test": "npm run eslint && npm run tape"
   },
   "repository": {
     "type": "git",
