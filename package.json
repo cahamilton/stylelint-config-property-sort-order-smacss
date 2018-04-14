@@ -4,7 +4,9 @@
   "description": "Stylelint config for Property Sort Ordering based on the SMACSS methodology",
   "main": "index.js",
   "scripts": {
-    "test": "eslint . && tape 'tests/index.js'"
+    "eslint": "eslint .",
+    "tape": "tape 'tests/index.js'",
+    "test": "npm run eslint && npm run tape"
   },
   "repository": {
     "type": "git",
@@ -26,16 +28,16 @@
   },
   "homepage": "https://github.com/cahamilton/stylelint-config-property-sort-order-smacss#readme",
   "dependencies": {
-    "css-property-sort-order-smacss": "2.1.1",
-    "stylelint-order": "^0.6.0"
+    "css-property-sort-order-smacss": "2.1.2",
+    "stylelint-order": "^0.8.1"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-stylelint": "^6.0.0",
-    "stylelint": "^8.0.0",
-    "tape": "^4.6.3"
+    "eslint": "^4.19.1",
+    "eslint-config-stylelint": "^8.1.0",
+    "stylelint": "^9.0.0",
+    "tape": "^4.9.0"
   },
   "peerDependencies": {
-    "stylelint": "^8.0.0"
+    "stylelint": "^9.0.0"
   }
 }
