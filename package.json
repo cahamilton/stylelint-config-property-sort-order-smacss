@@ -30,8 +30,8 @@
     "stylelint-order": "^0.8.1"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-config-stylelint": "^6.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-stylelint": "^8.1.0",
     "stylelint": "^9.0.0",
     "tape": "^4.6.3"
   },
