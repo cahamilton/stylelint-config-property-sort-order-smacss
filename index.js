@@ -12,5 +12,6 @@ module.exports = {
   ],
   "rules": {
     "order/properties-order": config,
+    "order/properties-alphabetical-order": null,
   },
 }
