@@ -35,7 +35,7 @@
     "eslint": "^4.19.1",
     "eslint-config-stylelint": "^8.1.0",
     "stylelint": "^9.0.0",
-    "tape": "^4.6.3"
+    "tape": "^4.9.0"
   },
   "peerDependencies": {
     "stylelint": "^9.0.0"
