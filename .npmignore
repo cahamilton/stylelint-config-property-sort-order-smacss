@@ -6,3 +6,4 @@
 /.gitignore
 /.idea
 /.travis.yml
+/*.log
