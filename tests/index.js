@@ -10,6 +10,7 @@ const order = require("./sort-order")
 
 test("Generate configuration", function (t) {
   const actual = generate(order)
+
   t.deepEqual(actual, expected)
   t.end()
 })
@@ -19,7 +20,8 @@ test("Stylelint configuration", function (t) {
     code: "a { color: red; top: 0; }",
     config,
   }).then(function (output) {
-    const actual = output.results[0].warnings[0].text
+    const actual = output.results[0].warnings[0].text.trim();
+
     t.equal(actual, "Expected \"top\" to come before \"color\" (order/properties-order)")
     t.end()
   }).catch(function (err) {
