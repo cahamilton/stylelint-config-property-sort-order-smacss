@@ -38,6 +38,6 @@
     "tape": "^4.10.1"
   },
   "peerDependencies": {
-    "stylelint": "^10.0.0"
+    "stylelint": "^10.0.0 || ^11.0.0"
   }
 }
