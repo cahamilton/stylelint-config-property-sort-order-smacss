@@ -1,5 +1,21 @@
 language: node_js
+
 node_js:
+  - "12"
   - "10"
-  - "9"
   - "8"
+
+cache:
+  npm: false
+
+env:
+  matrix:
+    - "STYLELINT=10"
+
+install:
+  - "npm install"
+  - 'npm install --no-save "stylelint@${STYLELINT}"'
+
+script:
+  - "stylelint --version"
+  - "npm test"
