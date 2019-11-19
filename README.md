@@ -29,4 +29,4 @@ For more information on configuring Stylelint, check out the [configuration](htt
 
 ## Property Ordering
 
-Refer to [here](https://github.com/cahamilton/css-property-sort-order-smacss/blob/v2.1.1/index.js) for the comprehensive list of property orders. 
+Refer to [here](https://github.com/cahamilton/css-property-sort-order-smacss/blob/master/index.js) for the comprehensive list of property orders. 
