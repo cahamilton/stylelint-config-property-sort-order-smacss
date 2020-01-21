@@ -10,6 +10,7 @@ cache:
 
 env:
   matrix:
+    - "STYLELINT=13"
     - "STYLELINT=12"
     - "STYLELINT=11"
     - "STYLELINT=10"
