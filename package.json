@@ -3,6 +3,9 @@
   "version": "5.3.0",
   "description": "Stylelint config for Property Sort Ordering based on the SMACSS methodology",
   "main": "index.js",
+  "engines": {
+    "node": "^10.0.0 || ^12.0.0 || ^13.0.0"
+  },
   "scripts": {
     "eslint": "eslint .",
     "tape": "tape 'tests/index.js'",
