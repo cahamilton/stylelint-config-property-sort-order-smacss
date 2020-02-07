@@ -1,9 +1,0 @@
-/node_modules/
-/tests/
-/.eslintrc
-/.editorconfig
-/.gitattributes
-/.gitignore
-/.idea
-/.travis.yml
-/*.log
