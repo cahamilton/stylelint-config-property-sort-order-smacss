@@ -15,16 +15,10 @@ describe('generate', () => {
         ],
       ],
       "groupB": [
-        [
-          "prop4",
-        ],
-        [
-          "prop5",
-          "prop6",
-        ],
-        [
-          "prop7",
-        ],
+        "prop4",
+        "prop5",
+        "prop6",
+        "prop7",
       ],
       "groupC": [
         [
