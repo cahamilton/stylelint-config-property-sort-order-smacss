@@ -2,16 +2,11 @@
 
 'use strict';
 
-module.exports = function (order) {
-  let config = [];
+module.exports = (order) => {
+  return Object.keys(order).reduce((config, key) => {
+    const group = order[key];
+    const props = group.reduce((array, current) => array.concat(current), []);
 
-  for (const property in order) {
-    if (Object.prototype.hasOwnProperty.call(order, property)) {
-      for (let i = 0; i < order[property].length; i++) {
-        config = config.concat(order[property][i]);
-      }
-    }
-  }
-
-  return config;
+    return config.concat(props);
+  }, []);
 };
