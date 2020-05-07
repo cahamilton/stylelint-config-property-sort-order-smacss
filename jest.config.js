@@ -1,11 +1,10 @@
-"use strict";
+/** @format */
+
+'use strict';
 
 module.exports = {
-  "cacheDirectory": "/tmp/jest/",
-  "collectCoverage": true,
-  "coverageDirectory": "coverage",
-  "coverageReporters": [
-    "lcov",
-    "text-summary"
-  ],
+  cacheDirectory: '/tmp/jest/',
+  collectCoverage: true,
+  coverageDirectory: 'coverage',
+  coverageReporters: ['lcov', 'text-summary'],
 };

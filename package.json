@@ -14,7 +14,8 @@
     "coverage": "coveralls < coverage/lcov.info",
     "eslint": "eslint .",
     "jest": "jest",
-    "test": "npm run eslint && npm run jest"
+    "prettier": "prettier --check '**/*.js'",
+    "test": "npm run eslint && npm run prettier && npm run jest"
   },
   "repository": {
     "type": "git",
@@ -44,6 +45,7 @@
     "eslint": "^6.6.0",
     "eslint-config-stylelint": "^12.0.0",
     "jest": "^26.0.1",
+    "prettier": "^2.0.5",
     "stylelint": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0"
   },
   "peerDependencies": {

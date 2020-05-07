@@ -1,16 +1,16 @@
-"use strict"
+/** @format */
 
-const order = require("css-property-sort-order-smacss")
+'use strict';
 
-const generate = require("./generate")
+const order = require('css-property-sort-order-smacss');
 
-const config = generate(order)
+const generate = require('./generate');
+
+const config = generate(order);
 
 module.exports = {
-  "plugins": [
-    "stylelint-order",
-  ],
-  "rules": {
-    "order/properties-order": config,
+  plugins: ['stylelint-order'],
+  rules: {
+    'order/properties-order': config,
   },
-}
+};
