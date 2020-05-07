@@ -12,8 +12,8 @@
   },
   "scripts": {
     "eslint": "eslint .",
-    "tape": "tape 'tests/index.js'",
-    "test": "npm run eslint && npm run tape"
+    "jest": "jest",
+    "test": "npm run eslint && npm run jest"
   },
   "repository": {
     "type": "git",
@@ -42,8 +42,7 @@
     "eslint": "^6.6.0",
     "eslint-config-stylelint": "^12.0.0",
     "jest": "^26.0.1",
-    "stylelint": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0",
-    "tape": "^5.0.0"
+    "stylelint": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0"
   },
   "peerDependencies": {
     "stylelint": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0"
