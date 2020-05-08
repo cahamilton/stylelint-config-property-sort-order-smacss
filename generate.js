@@ -1,15 +1,12 @@
-"use strict"
+/** @format */
 
-module.exports = function (order) {
-  let config = []
+'use strict';
 
-  for (const property in order) {
-    if (Object.prototype.hasOwnProperty.call(order, property)) {
-      for (let i = 0; i < order[property].length; i++) {
-        config = config.concat(order[property][i])
-      }
-    }
-  }
+module.exports = (order) => {
+  return Object.keys(order).reduce((config, key) => {
+    const group = order[key];
+    const props = group.reduce((array, current) => array.concat(current), []);
 
-  return config
-}
+    return config.concat(props);
+  }, []);
+};
