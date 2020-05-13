@@ -2,15 +2,13 @@
 
 'use strict';
 
-const order = require('css-property-sort-order-smacss');
-
 const generate = require('./generate');
 
-const config = generate(order);
+const options = generate();
 
 module.exports = {
   plugins: ['stylelint-order'],
   rules: {
-    'order/properties-order': config,
+    'order/properties-order': [options],
   },
 };
