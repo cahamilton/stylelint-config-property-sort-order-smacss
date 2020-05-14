@@ -4,13 +4,13 @@
 
 const stylelint = require('stylelint');
 
-const config = require('../index');
 const generate = require('../generate');
+const index = require('../index');
 
 /**
- * @param code
- * @param config
- * @return {Promise<{errored, warnings, invalidOptionWarnings}>}
+ * @param {String} code - String of CSS to lint
+ * @param {Object} config - Stylelint configuration
+ * @return {Promise<{errored, invalidOptionWarnings, warnings}>}
  */
 const lintCode = async ({ code, config }) => {
   const actual = await stylelint.lint({ code, config });
@@ -30,7 +30,7 @@ describe('basic configuration', () => {
       }
     `;
 
-    const { errored, warnings } = await lintCode({ code, config });
+    const { errored, warnings } = await lintCode({ code, config: index });
 
     expect(errored).toBe(true);
     expect(warnings).toHaveLength(1);
@@ -48,7 +48,7 @@ describe('basic configuration', () => {
       }
     `;
 
-    const { errored, warnings } = await lintCode({ code, config });
+    const { errored, warnings } = await lintCode({ code, config: index });
 
     expect(errored).toBe(true);
     expect(warnings.length).toBeGreaterThan(1);
@@ -62,7 +62,7 @@ describe('basic configuration', () => {
       }
     `;
 
-    const { errored, warnings } = await lintCode({ code, config });
+    const { errored, warnings } = await lintCode({ code, config: index });
 
     expect(errored).toBe(false);
     expect(warnings).toHaveLength(0);
@@ -78,7 +78,7 @@ describe('basic configuration', () => {
       }
     `;
 
-    const { errored, warnings } = await lintCode({ code, config });
+    const { errored, warnings } = await lintCode({ code, config: index });
 
     expect(errored).toBe(false);
     expect(warnings).toHaveLength(0);
