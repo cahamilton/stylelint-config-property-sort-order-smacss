@@ -32,7 +32,7 @@ describe('generate options', () => {
     expect(options).toEqual(expected);
   });
 
-  it('should correctly group properties, with additional options', () => {
+  it('should correctly group properties (with additional options)', () => {
     const options = generate({
       order: 'flexible',
       emptyLineBefore: 'always',
