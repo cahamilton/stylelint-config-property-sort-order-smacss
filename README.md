@@ -15,8 +15,12 @@
 ## Installation
 
 ```bash
-npm install --save-dev stylelint-config-property-sort-order-smacss
-`````
+npm install stylelint-config-property-sort-order-smacss --save-dev 
+```
+
+```bash
+yarn add stylelint-config-property-sort-order-smacss --dev 
+```
 
 ## Usage
 
@@ -31,8 +35,178 @@ To start using this configuration, simply extend this package in your Stylelint 
 }
 ```
 
-For more information on configuring Stylelint, check out the [configuration](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/configure.md) guide. 
+Given the above, the following patterns are considered violations:
 
-## Property Ordering
+```css
+a {
+  color: red;
+  top: 0;
+}
+```
 
-Refer to [here](https://github.com/cahamilton/css-property-sort-order-smacss/blob/master/index.js) for the comprehensive list of property orders. 
+```css
+a {
+  top: 0;
+  color: black;
+  position: absolute;
+  display: block;
+}
+```
+
+The following patterns are _not_ considered violations:
+
+```css
+a {
+  top: 0;
+  color: red;
+}
+```
+
+```css
+a {
+  display: block;
+  position: absolute;
+  top: 0;
+  color: black;
+}
+```
+
+Refer to [css-property-sort-order-smacss](https://github.com/cahamilton/css-property-sort-order-smacss/blob/v2.1.3/index.js) for the comprehensive list of property orders.
+
+For more information on configuring Stylelint, check out the [configuration](https://github.com/stylelint/stylelint/blob/13.3.3/docs/user-guide/configure.md) guide.
+
+## Advanced
+
+**This is currently only possible with an exported JavaScript configuration.**
+
+The basic usage outlined above, will enforce that properties are **strictly** sorted within their groups (box, border, background etc). Given this configuration makes use of [stylelint-order](https://github.com/hudochenkov/stylelint-order/tree/4.0.0) under the hood, there's a couple extra bits of functionality that can be configured. This will require manually generating the configuration - but passing in extra options as seen fit. These will be applied to **each** property group.
+
+### Options
+
+Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/4.0.0/rules/properties-order/README.md#options) documentation for a list of available options. 
+
+All options except `properties` and `groupName` can be modified.
+
+### Examples
+
+#### Flexible Ordering
+
+This will allow properties within the same group to be in any order.  
+
+Given:
+
+```js
+// stylelint.config.js
+
+const sortOrderSmacss = require('stylelint-config-property-sort-order-smacss/generate');
+
+module.exports = {
+  plugins: ['stylelint-order'],
+  rules: {
+    'order/properties-order': [
+      sortOrderSmacss()
+    ],
+  },
+};
+```
+
+The following patterns are considered violations:
+
+```css
+a {
+  top: 0;
+  position: absolute;
+  display: block;
+  color: black;
+}
+```
+
+Given: 
+
+```js
+// stylelint.config.js
+
+const sortOrderSmacss = require('stylelint-config-property-sort-order-smacss/generate');
+
+module.exports = {
+  plugins: ['stylelint-order'],
+  rules: {
+    'order/properties-order': [
+      sortOrderSmacss({ order: 'flexible' })
+    ],
+  },
+};
+```
+
+The following patterns are _not_ considered violations:
+
+```css
+a {
+  top: 0;
+  position: absolute;
+  display: block;
+  color: black;
+}
+```
+
+#### Empty Line After Property Group
+
+This will allow an empty line after each property group:
+
+Given:
+
+```js
+// stylelint.config.js
+
+const sortOrderSmacss = require('stylelint-config-property-sort-order-smacss/generate');
+
+module.exports = {
+  plugins: ['stylelint-order'],
+  rules: {
+    'order/properties-order': [
+      sortOrderSmacss({ emptyLineBefore: 'never' })
+    ],
+  },
+};
+```
+
+The following patterns are considered violations:
+
+```css
+a {
+  display: block;
+  position: absolute;
+  top: 0;
+
+  color: black;
+}
+```
+
+Given: 
+
+```js
+// stylelint.config.js
+
+const sortOrderSmacss = require('stylelint-config-property-sort-order-smacss/generate');
+
+module.exports = {
+  plugins: ['stylelint-order'],
+  rules: {
+    'order/properties-order': [
+      sortOrderSmacss({ emptyLineBefore: 'always' })
+    ],
+  },
+};
+```
+
+The following patterns are _not_ considered violations:
+
+```css
+a {
+  display: block;
+  position: absolute;
+  top: 0;
+
+  color: black;
+}
+```
