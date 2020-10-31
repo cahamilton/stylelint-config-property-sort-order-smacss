@@ -19,7 +19,7 @@ env:
 
 install:
   - "npm install"
-  - 'npm install --no-save "stylelint@${STYLELINT}"'
+  - 'npm install "stylelint@${STYLELINT}"'
 
 script:
   - "stylelint --version"
