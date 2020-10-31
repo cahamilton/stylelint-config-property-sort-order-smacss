@@ -1,6 +1,7 @@
 language: node_js
 
 node_js:
+  - "15"
   - "14"
   - "13"
   - "12"
@@ -17,10 +18,12 @@ env:
     - "STYLELINT=10"
 
 install:
+  - 'npm install "stylelint@${STYLELINT}"'
   - "npm install"
-  - 'npm install --no-save "stylelint@${STYLELINT}"'
 
 script:
   - "stylelint --version"
   - "npm test"
+
+after_success:
   - "npm run coverage"
