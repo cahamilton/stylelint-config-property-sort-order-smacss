@@ -19,8 +19,11 @@ env:
 
 install:
   - 'npm install "stylelint@${STYLELINT}"'
+  - "npm install"
+  - "stylelint --version"
 
 script:
-  - "stylelint --version"
   - "npm test"
+
+after_success:
   - "npm run coverage"
