@@ -18,7 +18,6 @@ env:
     - "STYLELINT=10"
 
 install:
-  - "npm install"
   - 'npm install "stylelint@${STYLELINT}"'
 
 script:
