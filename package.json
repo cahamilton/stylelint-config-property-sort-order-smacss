@@ -8,7 +8,7 @@
     "generate.js"
   ],
   "engines": {
-    "node": "^10.0.0 || ^12.0.0 || ^14.0.0 || ^15.0.0"
+    "node": ">=10.0.0"
   },
   "scripts": {
     "coverage": "coveralls < coverage/lcov.info",
