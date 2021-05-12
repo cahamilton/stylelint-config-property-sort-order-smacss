@@ -5,7 +5,6 @@
 
 [![NPM version](https://img.shields.io/npm/v/stylelint-config-property-sort-order-smacss.svg)](https://www.npmjs.org/package/stylelint-config-property-sort-order-smacss)
 [![NPM Downloads](https://img.shields.io/npm/dm/stylelint-config-property-sort-order-smacss.svg)](https://www.npmjs.org/package/stylelint-config-property-sort-order-smacss)
-[![Build Status](https://travis-ci.org/cahamilton/stylelint-config-property-sort-order-smacss.svg?branch=master)](https://travis-ci.org/cahamilton/stylelint-config-property-sort-order-smacss)
 [![Coverage Status](https://coveralls.io/repos/github/cahamilton/stylelint-config-property-sort-order-smacss/badge.svg?branch=master)](https://coveralls.io/github/cahamilton/stylelint-config-property-sort-order-smacss?branch=master)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=cahamilton/stylelint-config-property-sort-order-smacss)](https://dependabot.com)
 
@@ -15,11 +14,11 @@
 ## Installation
 
 ```bash
-npm install stylelint-config-property-sort-order-smacss --save-dev 
+npm install stylelint-config-property-sort-order-smacss --save-dev
 ```
 
 ```bash
-yarn add stylelint-config-property-sort-order-smacss --dev 
+yarn add stylelint-config-property-sort-order-smacss --dev
 ```
 
 ## Usage
@@ -83,7 +82,7 @@ The basic usage outlined above, will enforce that properties are **strictly** so
 
 ### Options
 
-Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/4.0.0/rules/properties-order/README.md#options) documentation for a list of available options. 
+Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/4.0.0/rules/properties-order/README.md#options) documentation for a list of available options.
 
 All options except `properties` and `groupName` can be modified.
 
@@ -91,7 +90,7 @@ All options except `properties` and `groupName` can be modified.
 
 #### Flexible Ordering
 
-This will allow properties within the same group to be in any order.  
+This will allow properties within the same group to be in any order.
 
 Given:
 
@@ -121,7 +120,7 @@ a {
 }
 ```
 
-Given: 
+Given:
 
 ```js
 // stylelint.config.js
@@ -182,7 +181,7 @@ a {
 }
 ```
 
-Given: 
+Given:
 
 ```js
 // stylelint.config.js
