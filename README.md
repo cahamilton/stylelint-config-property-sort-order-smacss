@@ -3,6 +3,8 @@
 [![SMACSS Logo](https://user-images.githubusercontent.com/4007311/81406794-25fdbe00-9132-11ea-8e5d-dba7d3f3915e.png)](http://smacss.com)
 [![Stylelint Logo](https://user-images.githubusercontent.com/4007311/81406797-272eeb00-9132-11ea-8b7d-cf84bece72a6.png)](https://github.com/stylelint/stylelint)
 
+[![Build](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/actions/workflows/build.yml/badge.svg)](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/actions/workflows/build.yml)
+[![CodeQL](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/actions/workflows/codeql-analysis.yml)
 [![NPM version](https://img.shields.io/npm/v/stylelint-config-property-sort-order-smacss.svg)](https://www.npmjs.org/package/stylelint-config-property-sort-order-smacss)
 [![NPM Downloads](https://img.shields.io/npm/dm/stylelint-config-property-sort-order-smacss.svg)](https://www.npmjs.org/package/stylelint-config-property-sort-order-smacss)
 [![Coverage Status](https://coveralls.io/repos/github/cahamilton/stylelint-config-property-sort-order-smacss/badge.svg?branch=master)](https://coveralls.io/github/cahamilton/stylelint-config-property-sort-order-smacss?branch=master)
