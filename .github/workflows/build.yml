@@ -26,10 +26,14 @@ jobs:
         node-version: ${{ matrix.node-version }}
 
     - name: Install dependencies
-      run: npm install "stylelint@${{ matrix.stylelint }}" && npm install
+      run: | 
+        npm install "stylelint@${{ matrix.stylelint }}"
+        npm install
 
     - name: Version Check
-      run: node --version && npm run stylelint --version
+      run: |
+        node --version
+        npm ls stylelint
 
     - name: Test packages
       run: npm test
