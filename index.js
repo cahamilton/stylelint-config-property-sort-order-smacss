@@ -1,7 +1,5 @@
 /** @format */
 
-'use strict';
-
 const generate = require('./generate');
 
 const options = generate();

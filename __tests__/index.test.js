@@ -1,7 +1,5 @@
 /** @format */
 
-'use strict';
-
 const stylelint = require('stylelint');
 
 const generate = require('../generate');

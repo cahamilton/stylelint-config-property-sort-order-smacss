@@ -1,7 +1,5 @@
 /** @format */
 
-'use strict';
-
 module.exports = {
   cacheDirectory: '/tmp/jest/',
   collectCoverage: true,
