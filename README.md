@@ -8,7 +8,6 @@
 [![NPM version](https://img.shields.io/npm/v/stylelint-config-property-sort-order-smacss.svg)](https://www.npmjs.org/package/stylelint-config-property-sort-order-smacss)
 [![NPM Downloads](https://img.shields.io/npm/dm/stylelint-config-property-sort-order-smacss.svg)](https://www.npmjs.org/package/stylelint-config-property-sort-order-smacss)
 [![Coverage Status](https://coveralls.io/repos/github/cahamilton/stylelint-config-property-sort-order-smacss/badge.svg?branch=master)](https://coveralls.io/github/cahamilton/stylelint-config-property-sort-order-smacss?branch=master)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=cahamilton/stylelint-config-property-sort-order-smacss)](https://dependabot.com)
 
 [Stylelint](https://github.com/stylelint/stylelint) config for Property Sort Ordering based on the [SMACSS](http://smacss.com) methodology.
 
