@@ -80,11 +80,11 @@ For more information on configuring Stylelint, check out the [configuration](htt
 
 **This is currently only possible with an exported JavaScript configuration.**
 
-The basic usage outlined above, will enforce that properties are **strictly** sorted within their groups (box, border, background etc). Given this configuration makes use of [stylelint-order](https://github.com/hudochenkov/stylelint-order/tree/4.0.0) under the hood, there's a couple extra bits of functionality that can be configured. This will require manually generating the configuration - but passing in extra options as seen fit. These will be applied to **each** property group.
+The basic usage outlined above, will enforce that properties are **strictly** sorted within their groups (box, border, background etc). Given this configuration makes use of [stylelint-order](https://github.com/hudochenkov/stylelint-order/tree/5.0.0) under the hood, there's a couple extra bits of functionality that can be configured. This will require manually generating the configuration - but passing in extra options as seen fit. These will be applied to **each** property group.
 
 ### Options
 
-Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/4.0.0/rules/properties-order/README.md#options) documentation for a list of available options.
+Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/5.0.0/rules/properties-order/README.md#options) documentation for a list of available options.
 
 All options except `properties` and `groupName` can be modified.
 
