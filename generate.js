@@ -1,7 +1,5 @@
 /** @format */
 
-'use strict';
-
 const order = require('css-property-sort-order-smacss');
 
 /**
@@ -10,7 +8,9 @@ const order = require('css-property-sort-order-smacss');
  * @return {Array}
  */
 module.exports = (options = {}) => {
-  return Object.keys(order).reduce((config, key) => {
+  const keys = Object.keys(order);
+
+  return keys.reduce((config, key) => {
     const groupName = key;
     const groupCurrent = order[key];
     const hasNestedGroups = groupCurrent.every((item) => Array.isArray(item));

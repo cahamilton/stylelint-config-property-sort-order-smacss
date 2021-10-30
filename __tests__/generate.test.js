@@ -1,7 +1,5 @@
 /** @format */
 
-'use strict';
-
 const generate = require('../generate');
 
 jest.mock('css-property-sort-order-smacss', () => ({
