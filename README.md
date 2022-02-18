@@ -71,7 +71,7 @@ a {
 }
 ```
 
-Refer to [css-property-sort-order-smacss](https://github.com/cahamilton/css-property-sort-order-smacss/blob/v2.1.3/index.js) for the comprehensive list of property orders.
+Refer to [css-property-sort-order-smacss](https://github.com/cahamilton/css-property-sort-order-smacss/blob/v2.2.0/index.js) for the comprehensive list of property orders.
 
 For more information on configuring Stylelint, check out the [configuration](https://github.com/stylelint/stylelint/blob/14.0.0/docs/user-guide/configure.md) guide.
 
