@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v9.1.0](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/tree/v9.1.0)
+
+- Adds support for Stylelint v15
+
+[Full Changelog](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/compare/v9.0.0...v9.1.0)
+
 ## [v9.0.0](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/tree/v9.0.0)
 
 - Update CSS order to include logical properties ([css-property-sort-order-smacss@v2.2.0](https://github.com/cahamilton/css-property-sort-order-smacss/commit/c259a0583a20efde24efc08e1efbb872b80c0a1d))
