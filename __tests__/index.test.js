@@ -11,7 +11,11 @@ const index = require('../index');
  * @return {Promise<{errored, invalidOptionWarnings, warnings}>}
  */
 const lintCode = async ({ code, config }) => {
-  const actual = await stylelint.lint({ code, config });
+  const actual = await stylelint.lint({
+    code,
+    config,
+    quietDeprecationWarnings: true,
+  });
 
   const { errored, results } = actual;
   const { invalidOptionWarnings, warnings } = results[0];
