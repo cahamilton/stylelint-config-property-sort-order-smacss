@@ -14,8 +14,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [14, 16, 18]
-        stylelint: [14, 15]
+        node-version: [18, 20]
+        stylelint: [14, 15, 16]
 
     steps:
     - name: Checkout
@@ -52,7 +52,7 @@ jobs:
     - name: Setup Node
       uses: actions/setup-node@v3
       with:
-        node-version: 18
+        node-version: 20
 
     - name: Install dependencies
       run: npm install
