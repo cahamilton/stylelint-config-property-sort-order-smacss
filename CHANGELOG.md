@@ -4,6 +4,14 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v10.0.0](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/tree/v10.0.0)
+
+- Adds support for Stylelint v16
+- Remove Node v14 and v16 support (EOL)
+- Set minimum Node version required for Stylelint v16 in engines field
+
+[Full Changelog](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/compare/v9.1.0...v10.0.0)
+
 ## [v9.1.0](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/tree/v9.1.0)
 
 - Adds support for Stylelint v15
