@@ -18,50 +18,23 @@ jobs:
         stylelint: [14, 15, 16]
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Setup Node v${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Setup Node v${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Install dependencies
-      run: |
-        npm install "stylelint@${{ matrix.stylelint }}"
-        npm install
+      - name: Install dependencies
+        run: |
+          npm install "stylelint@${{ matrix.stylelint }}"
+          npm install
 
-    - name: Version Check
-      run: |
-        node --version
-        npm ls stylelint
+      - name: Version Check
+        run: |
+          node --version
+          npm ls stylelint
 
-    - name: Test packages
-      run: npm test
-
-  success:
-    name: Success
-    needs: build
-    runs-on: ubuntu-latest
-    if: false # TODO: Remove when Jest issues are resolved
-
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v3
-
-    - name: Setup Node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run Code Coverage
-      run: npm run jest --coverage
-
-    - name: Coveralls
-      uses: coverallsapp/github-action@master
-      with:
-        github-token: ${{ secrets.github_token }}
-        path-to-lcov: ./coverage/lcov.info
+      - name: Test packages
+        run: npm test
