@@ -14,7 +14,8 @@
     "coverage": "coveralls < coverage/lcov.info",
     "eslint": "eslint .",
     "jest": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest",
-    "prettier": "prettier --check '**/*.js'",
+    "prettier": "prettier --check '**/*.{js,mjs,cjs}'",
+    "prettier:fix": "prettier --write '**/*.{js,mjs,cjs}'",
     "test": "npm run eslint && npm run prettier && npm run jest"
   },
   "repository": {
@@ -41,11 +42,11 @@
     "stylelint-order": "^6.0.4"
   },
   "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "@eslint/markdown": "^6.4.0",
     "coveralls": "^3.1.0",
-    "eslint": "^8.2.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.25.2",
+    "eslint": "^9.27.0",
+    "globals": "^16.1.0",
     "jest": "^29.0.1",
     "jest-light-runner": "^0.6.0",
     "prettier": "^3.0.0",
