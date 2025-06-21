@@ -1,14 +1,12 @@
 /** @format */
 
-const proxyquire = require('proxyquire');
+const generate = require('../generate');
 
-const generate = proxyquire.noCallThru().load('../generate', {
-  'css-property-sort-order-smacss': {
-    groupA: [['prop1', 'prop2'], ['prop3']],
-    groupB: ['prop4', 'prop5', 'prop6', 'prop7'],
-    groupC: [['prop8', 'prop9', 'prop10']],
-  },
-});
+jest.mock('css-property-sort-order-smacss', () => ({
+  groupA: [['prop1', 'prop2'], ['prop3']],
+  groupB: ['prop4', 'prop5', 'prop6', 'prop7'],
+  groupC: [['prop8', 'prop9', 'prop10']],
+}));
 
 describe('generate options', () => {
   it('should correctly group properties', () => {
