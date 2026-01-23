@@ -1,12 +1,10 @@
 /** @format */
 
-const generate = require('./generate');
+import generateConfig from './generate.js';
 
-const options = generate();
-
-module.exports = {
+export default {
   plugins: ['stylelint-order'],
   rules: {
-    'order/properties-order': [options],
+    'order/properties-order': generateConfig(),
   },
 };

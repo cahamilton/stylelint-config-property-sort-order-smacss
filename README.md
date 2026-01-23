@@ -1,3 +1,4 @@
+<!-- omit from toc -->
 # stylelint-config-property-sort-order-smacss
 
 [![SMACSS Logo](https://user-images.githubusercontent.com/4007311/81406794-25fdbe00-9132-11ea-8e5d-dba7d3f3915e.png)](http://smacss.com)
@@ -10,6 +11,16 @@
 
 [Stylelint](https://github.com/stylelint/stylelint) config for Property Sort Ordering based on the [SMACSS](http://smacss.com) methodology.
 
+<!-- omit from toc -->
+## Table of Contents
+
+- [Installation](#installation)
+- [Basic Configuration](#basic-configuration)
+- [Advanced Configuration](#advanced-configuration)
+  - [Options](#options)
+  - [Examples](#examples)
+    - [Flexible Ordering](#flexible-ordering)
+    - [Empty Line After Property Group](#empty-line-after-property-group)
 
 ## Installation
 
@@ -17,21 +28,22 @@
 npm install stylelint-config-property-sort-order-smacss --save-dev
 ```
 
-```bash
-yarn add stylelint-config-property-sort-order-smacss --dev
-```
-
-## Usage
+## Basic Configuration
 
 To start using this configuration, simply extend this package in your Stylelint configuration.
 
 ```js
-{
-  "extends": "stylelint-config-property-sort-order-smacss",
-  "rules": {
+// stylelint.config.js
+
+/**
+ * @type {import('stylelint').Config}
+ */
+export default {
+  extends: ['stylelint-config-property-sort-order-smacss'],
+  rules: {
     // Add additional rules here
-  }
-}
+  },
+};
 ```
 
 Given the above, the following patterns are considered violations:
@@ -72,17 +84,19 @@ a {
 
 Refer to [css-property-sort-order-smacss](https://github.com/cahamilton/css-property-sort-order-smacss/blob/v2.2.0/index.js) for the comprehensive list of property orders.
 
-For more information on configuring Stylelint, check out the [configuration](https://github.com/stylelint/stylelint/blob/16.0.0/docs/user-guide/configure.md) guide.
+For more information on configuring Stylelint, check out the [configuration](https://github.com/stylelint/stylelint/blob/17.0.0/docs/user-guide/configure.md) guide.
 
-## Advanced
+## Advanced Configuration
 
-**This is currently only possible with an exported JavaScript configuration.**
+<!-- eslint-disable-next-line markdown/no-missing-label-refs -->
+> [!NOTE]
+> This requires a JavaScript configuration file (eg. `stylelint.config.js`, `stylelint.config.mjs`) and is not supported by JSON, YAML or other file formats.
 
-The basic usage outlined above, will enforce that properties are **strictly** sorted within their groups (box, border, background etc). Given this configuration makes use of [stylelint-order](https://github.com/hudochenkov/stylelint-order/tree/6.0.4) under the hood, there's a couple extra bits of functionality that can be configured. This will require manually generating the configuration - but passing in extra options as seen fit. These will be applied to **each** property group.
+The basic configuration outlined above, will enforce that properties are **strictly** sorted within their groups (box, border, background etc). Given this configuration makes use of [stylelint-order](https://github.com/hudochenkov/stylelint-order/tree/7.0.1), there's a couple extra bits of functionality that can be configured. This will require manually generating the configuration - but passing in extra options as required. These will be applied to **each** property group.
 
 ### Options
 
-Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/6.0.4/rules/properties-order/README.md#options) documentation for a list of available options.
+Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/7.0.1/rules/properties-order/README.md#options) documentation for a list of available options.
 
 All options except `properties` and `groupName` can be modified.
 
@@ -97,14 +111,12 @@ Given:
 ```js
 // stylelint.config.js
 
-const sortOrderSmacss = require('stylelint-config-property-sort-order-smacss/generate');
+import generateConfig from 'stylelint-config-property-sort-order-smacss/generate';
 
-module.exports = {
+export default {
   plugins: ['stylelint-order'],
   rules: {
-    'order/properties-order': [
-      sortOrderSmacss()
-    ],
+    'order/properties-order': generateConfig(),
   },
 };
 ```
@@ -125,14 +137,14 @@ Given:
 ```js
 // stylelint.config.js
 
-const sortOrderSmacss = require('stylelint-config-property-sort-order-smacss/generate');
+import generateConfig from 'stylelint-config-property-sort-order-smacss/generate';
 
-module.exports = {
+export default {
   plugins: ['stylelint-order'],
   rules: {
-    'order/properties-order': [
-      sortOrderSmacss({ order: 'flexible' })
-    ],
+    'order/properties-order': generateConfig({
+      order: 'flexible',
+    }),
   },
 };
 ```
@@ -157,14 +169,14 @@ Given:
 ```js
 // stylelint.config.js
 
-const sortOrderSmacss = require('stylelint-config-property-sort-order-smacss/generate');
+import generateConfig from 'stylelint-config-property-sort-order-smacss/generate';
 
-module.exports = {
+export default {
   plugins: ['stylelint-order'],
   rules: {
-    'order/properties-order': [
-      sortOrderSmacss({ emptyLineBefore: 'never' })
-    ],
+    'order/properties-order': generateConfig({
+      emptyLineBefore: 'never',
+    }),
   },
 };
 ```
@@ -186,14 +198,14 @@ Given:
 ```js
 // stylelint.config.js
 
-const sortOrderSmacss = require('stylelint-config-property-sort-order-smacss/generate');
+import generateConfig from 'stylelint-config-property-sort-order-smacss/generate';
 
-module.exports = {
+export default {
   plugins: ['stylelint-order'],
   rules: {
-    'order/properties-order': [
-      sortOrderSmacss({ emptyLineBefore: 'always' })
-    ],
+    'order/properties-order': generateConfig({
+      emptyLineBefore: 'always',
+    }),
   },
 };
 ```

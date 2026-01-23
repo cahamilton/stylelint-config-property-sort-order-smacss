@@ -1,16 +1,20 @@
 /** @format */
 
-const generate = require('../generate');
+import { describe, it, expect, vi } from 'vitest';
 
-jest.mock('css-property-sort-order-smacss', () => ({
-  groupA: [['prop1', 'prop2'], ['prop3']],
-  groupB: ['prop4', 'prop5', 'prop6', 'prop7'],
-  groupC: [['prop8', 'prop9', 'prop10']],
+import generateConfig from '../generate.js';
+
+vi.mock('css-property-sort-order-smacss', () => ({
+  default: {
+    groupA: [['prop1', 'prop2'], ['prop3']],
+    groupB: ['prop4', 'prop5', 'prop6', 'prop7'],
+    groupC: [['prop8', 'prop9', 'prop10']],
+  },
 }));
 
 describe('generate options', () => {
   it('should correctly group properties', () => {
-    const options = generate();
+    const options = generateConfig();
 
     const expected = [
       {
@@ -31,7 +35,7 @@ describe('generate options', () => {
   });
 
   it('should correctly group properties (with additional options)', () => {
-    const options = generate({
+    const options = generateConfig({
       order: 'flexible',
       emptyLineBefore: 'always',
     });
@@ -61,7 +65,7 @@ describe('generate options', () => {
   });
 
   it('should not allow `groupName` or `properties` to be overridden', () => {
-    const options = generate({
+    const options = generateConfig({
       groupName: 'someRandomGroupName',
       properties: ['some', 'random', 'props'],
     });

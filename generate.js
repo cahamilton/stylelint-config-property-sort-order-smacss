@@ -1,13 +1,13 @@
 /** @format */
 
-const order = require('css-property-sort-order-smacss');
+import order from 'css-property-sort-order-smacss';
 
 /**
  * Returns an array of group objects for `stylelint-order` config
  * @param {Object} options - Optional group properties
  * @return {Array}
  */
-module.exports = (options = {}) => {
+const generateConfig = (options = {}) => {
   const keys = Object.keys(order);
 
   return keys.reduce((config, key) => {
@@ -24,3 +24,5 @@ module.exports = (options = {}) => {
     return [...config, { ...options, groupName, properties }];
   }, []);
 };
+
+export default generateConfig;
