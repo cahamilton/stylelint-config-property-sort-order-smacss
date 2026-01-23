@@ -38,7 +38,7 @@
   "homepage": "https://github.com/cahamilton/stylelint-config-property-sort-order-smacss#readme",
   "dependencies": {
     "css-property-sort-order-smacss": "~2.2.0",
-    "stylelint-order": "^6.0.4"
+    "stylelint-order": "^7.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
