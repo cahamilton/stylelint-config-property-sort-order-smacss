@@ -1,9 +1,10 @@
 /** @format */
 
-const stylelint = require('stylelint');
+import { describe, it, expect } from 'vitest';
+import stylelint from 'stylelint';
 
-const generate = require('../generate');
-const index = require('../index');
+import generateConfig from '../generate.js';
+import defaultConfig from '../index.js';
 
 /**
  * @param {String} code - String of CSS to lint
@@ -11,11 +12,7 @@ const index = require('../index');
  * @return {Promise<{errored, invalidOptionWarnings, warnings}>}
  */
 const lintCode = async ({ code, config }) => {
-  const actual = await stylelint.lint({
-    code,
-    config,
-    quietDeprecationWarnings: true,
-  });
+  const actual = await stylelint.lint({ code, config });
 
   const { errored, results } = actual;
   const { invalidOptionWarnings, warnings } = results[0];
@@ -32,7 +29,10 @@ describe('basic configuration', () => {
       }
     `;
 
-    const { errored, warnings } = await lintCode({ code, config: index });
+    const { errored, warnings } = await lintCode({
+      code,
+      config: defaultConfig,
+    });
 
     expect(errored).toBe(true);
     expect(warnings).toHaveLength(1);
@@ -50,7 +50,10 @@ describe('basic configuration', () => {
       }
     `;
 
-    const { errored, warnings } = await lintCode({ code, config: index });
+    const { errored, warnings } = await lintCode({
+      code,
+      config: defaultConfig,
+    });
 
     expect(errored).toBe(true);
     expect(warnings.length).toBeGreaterThan(1);
@@ -64,7 +67,10 @@ describe('basic configuration', () => {
       }
     `;
 
-    const { errored, warnings } = await lintCode({ code, config: index });
+    const { errored, warnings } = await lintCode({
+      code,
+      config: defaultConfig,
+    });
 
     expect(errored).toBe(false);
     expect(warnings).toHaveLength(0);
@@ -80,7 +86,10 @@ describe('basic configuration', () => {
       }
     `;
 
-    const { errored, warnings } = await lintCode({ code, config: index });
+    const { errored, warnings } = await lintCode({
+      code,
+      config: defaultConfig,
+    });
 
     expect(errored).toBe(false);
     expect(warnings).toHaveLength(0);
@@ -102,9 +111,7 @@ describe('advanced configuration', () => {
       const config = {
         plugins: ['stylelint-order'],
         rules: {
-          'order/properties-order': [
-            generate(), //
-          ],
+          'order/properties-order': generateConfig(),
         },
       };
 
@@ -118,9 +125,9 @@ describe('advanced configuration', () => {
       const config = {
         plugins: ['stylelint-order'],
         rules: {
-          'order/properties-order': [
-            generate({ order: 'flexible' }), //
-          ],
+          'order/properties-order': generateConfig({
+            order: 'flexible',
+          }),
         },
       };
 
@@ -146,9 +153,9 @@ describe('advanced configuration', () => {
       const config = {
         plugins: ['stylelint-order'],
         rules: {
-          'order/properties-order': [
-            generate({ emptyLineBefore: 'never' }), //
-          ],
+          'order/properties-order': generateConfig({
+            emptyLineBefore: 'never',
+          }),
         },
       };
 
@@ -166,9 +173,7 @@ describe('advanced configuration', () => {
       const config = {
         plugins: ['stylelint-order'],
         rules: {
-          'order/properties-order': [
-            generate(), //
-          ],
+          'order/properties-order': generateConfig(),
         },
       };
 
@@ -182,9 +187,9 @@ describe('advanced configuration', () => {
       const config = {
         plugins: ['stylelint-order'],
         rules: {
-          'order/properties-order': [
-            generate({ emptyLineBefore: 'always' }), //
-          ],
+          'order/properties-order': generateConfig({
+            emptyLineBefore: 'always',
+          }),
         },
       };
 
@@ -207,9 +212,9 @@ describe('advanced configuration', () => {
       const config = {
         plugins: ['stylelint-order'],
         rules: {
-          'order/properties-order': [
-            generate({ emptyLineBefore: 'invalidOption' }), //
-          ],
+          'order/properties-order': generateConfig({
+            emptyLineBefore: 'invalidOption',
+          }),
         },
       };
 

@@ -14,8 +14,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [18, 20]
-        stylelint: [14, 15, 16]
+        node-version: [20, 22, 24]
+        stylelint: [16, 17]
 
     steps:
       - name: Checkout

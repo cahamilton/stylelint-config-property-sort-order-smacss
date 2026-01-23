@@ -2,20 +2,24 @@
   "name": "stylelint-config-property-sort-order-smacss",
   "version": "10.0.0",
   "description": "Stylelint config for Property Sort Ordering based on the SMACSS methodology",
-  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./generate": "./generate.js"
+  },
   "files": [
     "index.js",
     "generate.js"
   ],
   "engines": {
-    "node": ">=18.12.0"
+    "node": ">=20.19.0"
   },
   "scripts": {
     "eslint": "eslint .",
-    "jest": "NODE_OPTIONS=\"--experimental-vm-modules --no-warnings\" jest",
+    "vitest": "vitest --reporter=verbose",
     "prettier": "prettier --check '**/*.{js,mjs,cjs}'",
     "prettier:fix": "prettier --write '**/*.{js,mjs,cjs}'",
-    "test": "npm run eslint && npm run prettier && npm run jest"
+    "test": "npm run eslint && npm run prettier && npm run vitest -- --run"
   },
   "repository": {
     "type": "git",
@@ -30,26 +34,26 @@
     "stylelint-config",
     "stylelint-config-property-sort-order-smacss"
   ],
-  "author": "Carl Hamilton <info@carlhamilton.co.uk>",
+  "author": "Carl Hamilton <github@carlhamilton.dev>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/issues"
   },
   "homepage": "https://github.com/cahamilton/stylelint-config-property-sort-order-smacss#readme",
   "dependencies": {
-    "css-property-sort-order-smacss": "~2.2.0",
-    "stylelint-order": "^6.0.4"
+    "css-property-sort-order-smacss": "3.0.0",
+    "stylelint-order": "^7.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "@eslint/markdown": "^7.5.1",
     "eslint": "^9.39.2",
     "globals": "^17.1.0",
-    "jest": "^30.0.2",
     "prettier": "^3.0.0",
-    "stylelint": "^14.0.0 || ^15.0.0 || ^16.0.0"
+    "stylelint": "^16.18.0 || ^17.0.0",
+    "vitest": "^4.0.0"
   },
   "peerDependencies": {
-    "stylelint": "^14.0.0 || ^15.0.0 || ^16.0.0"
+    "stylelint": "^16.18.0 || ^17.0.0"
   }
 }
