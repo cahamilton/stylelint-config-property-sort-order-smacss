@@ -14,7 +14,7 @@ export default {
   trailingComma: 'all',
   bracketSpacing: true,
   arrowParens: 'always',
-  parser: 'babel',
+  parser: 'babel-ts',
   requirePragma: false,
   insertPragma: true,
   endOfLine: 'lf',

@@ -4,22 +4,32 @@
   "description": "Stylelint config for Property Sort Ordering based on the SMACSS methodology",
   "type": "module",
   "exports": {
-    ".": "./index.js",
-    "./generate": "./generate.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./generate": {
+      "types": "./dist/generate.d.ts",
+      "default": "./dist/generate.js"
+    }
   },
   "files": [
-    "index.js",
-    "generate.js"
+    "dist"
   ],
   "engines": {
     "node": ">=20.19.0"
   },
   "scripts": {
+    "clean": "rm -rfv dist/",
+    "build": "tsc",
+    "prebuild": "npm run clean && npm run validate",
+    "prepack": "npm run build",
     "eslint": "eslint .",
-    "vitest": "vitest --reporter=verbose",
-    "prettier": "prettier --check '**/*.{js,mjs,cjs}'",
-    "prettier:fix": "prettier --write '**/*.{js,mjs,cjs}'",
-    "test": "npm run eslint && npm run prettier && npm run vitest -- --run"
+    "test": "vitest --reporter=verbose --run",
+    "test:watch": "vitest --reporter=verbose",
+    "prettier": "prettier --check '**/*.{ts,js,mjs,cjs}'",
+    "prettier:fix": "prettier --write '**/*.{ts,js,mjs,cjs}'",
+    "validate": "npm run eslint && npm run prettier && npm run test"
   },
   "repository": {
     "type": "git",
@@ -51,6 +61,7 @@
     "globals": "^17.1.0",
     "prettier": "^3.0.0",
     "stylelint": "^16.18.0 || ^17.0.0",
+    "typescript": "^5.0.0",
     "vitest": "^4.0.0"
   },
   "peerDependencies": {

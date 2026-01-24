@@ -66,6 +66,7 @@ describe('generate options', () => {
 
   it('should not allow `groupName` or `properties` to be overridden', () => {
     const options = generateConfig({
+      // @ts-expect-error
       groupName: 'someRandomGroupName',
       properties: ['some', 'random', 'props'],
     });
