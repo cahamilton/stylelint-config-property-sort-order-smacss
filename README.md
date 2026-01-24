@@ -82,7 +82,7 @@ a {
 }
 ```
 
-Refer to [css-property-sort-order-smacss](https://github.com/cahamilton/css-property-sort-order-smacss/blob/v2.2.0/index.js) for the comprehensive list of property orders.
+Refer to [css-property-sort-order-smacss](https://github.com/cahamilton/css-property-sort-order-smacss/blob/v3.0.0/src/index.ts) for the comprehensive list of property orders.
 
 For more information on configuring Stylelint, check out the [configuration](https://github.com/stylelint/stylelint/blob/17.0.0/docs/user-guide/configure.md) guide.
 
@@ -96,7 +96,15 @@ The basic configuration outlined above, will enforce that properties are **stric
 
 ### Options
 
-Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/7.0.1/rules/properties-order/README.md#options) documentation for a list of available options.
+```ts
+type Options = {
+  emptyLineBefore?: 'always' | 'never' | 'threshold';
+  noEmptyLineBetween?: boolean;
+  order?: 'flexible';
+};
+```
+
+Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/7.0.1/rules/properties-order/README.md#options) documentation for more information on available options.
 
 All options except `properties` and `groupName` can be modified.
 

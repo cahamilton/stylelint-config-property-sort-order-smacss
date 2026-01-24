@@ -6,13 +6,8 @@ import stylelint from 'stylelint';
 import generateConfig from '../generate.js';
 import defaultConfig from '../index.js';
 
-/**
- * @param {String} code - String of CSS to lint
- * @param {Object} config - Stylelint configuration
- * @return {Promise<{errored, invalidOptionWarnings, warnings}>}
- */
-const lintCode = async ({ code, config }) => {
-  const actual = await stylelint.lint({ code, config });
+const lintCode = async (options: stylelint.LinterOptions) => {
+  const actual = await stylelint.lint(options);
 
   const { errored, results } = actual;
   const { invalidOptionWarnings, warnings } = results[0];
@@ -213,6 +208,7 @@ describe('advanced configuration', () => {
         plugins: ['stylelint-order'],
         rules: {
           'order/properties-order': generateConfig({
+            // @ts-expect-error
             emptyLineBefore: 'invalidOption',
           }),
         },

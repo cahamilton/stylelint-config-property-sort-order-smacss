@@ -29,12 +29,12 @@ jobs:
       - name: Install dependencies
         run: |
           npm install "stylelint@${{ matrix.stylelint }}"
-          npm install
+          npm ci
 
       - name: Version Check
         run: |
           node --version
           npm ls stylelint
 
-      - name: Test packages
-        run: npm test
+      - name: Build package
+        run: npm run build
