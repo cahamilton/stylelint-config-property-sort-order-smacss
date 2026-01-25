@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v11.0.0](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/tree/v11.0.0)
+
+- Adds support for Stylelint v17
+- Remove Stylelint support for versions <16.18.0
+- Remove Node v18 support (EOL)
+- Converts codebase to ESM (requirement for Stylelint v17) and TypeScript
+
+[Full Changelog](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/compare/v10.0.0...v11.0.0)
+
 ## [v10.0.0](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/tree/v10.0.0)
 
 - Adds support for Stylelint v16
