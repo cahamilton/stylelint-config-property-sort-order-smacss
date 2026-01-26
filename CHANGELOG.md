@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v11.1.0](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/tree/v11.1.0)
+
+- Add missing secondary options
+
+[Full Changelog](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/compare/v11.0.0...v11.1.0)
+
 ## [v11.0.0](https://github.com/cahamilton/stylelint-config-property-sort-order-smacss/tree/v11.0.0)
 
 - Adds support for Stylelint v17
