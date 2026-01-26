@@ -101,6 +101,9 @@ type Options = {
   emptyLineBefore?: 'always' | 'never' | 'threshold';
   noEmptyLineBetween?: boolean;
   order?: 'flexible';
+  unspecified?: 'top' | 'bottom' | 'bottomAlphabetical' | 'ignore';
+  emptyLineBeforeUnspecified?: 'always' | 'never' | 'threshold';
+  emptyLineMinimumPropertyThreshold?: number;
 };
 ```
 
