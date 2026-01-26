@@ -17,18 +17,21 @@ describe('generate options', () => {
     const options = generateConfig();
 
     const expected = [
-      {
-        groupName: 'groupA',
-        properties: ['prop1', 'prop2', 'prop3'],
-      },
-      {
-        groupName: 'groupB',
-        properties: ['prop4', 'prop5', 'prop6', 'prop7'],
-      },
-      {
-        groupName: 'groupC',
-        properties: ['prop8', 'prop9', 'prop10'],
-      },
+      [
+        {
+          groupName: 'groupA',
+          properties: ['prop1', 'prop2', 'prop3'],
+        },
+        {
+          groupName: 'groupB',
+          properties: ['prop4', 'prop5', 'prop6', 'prop7'],
+        },
+        {
+          groupName: 'groupC',
+          properties: ['prop8', 'prop9', 'prop10'],
+        },
+      ],
+      {},
     ];
 
     expect(options).toEqual(expected);
@@ -41,23 +44,64 @@ describe('generate options', () => {
     });
 
     const expected = [
+      [
+        {
+          groupName: 'groupA',
+          properties: ['prop1', 'prop2', 'prop3'],
+          order: 'flexible',
+          emptyLineBefore: 'always',
+        },
+        {
+          groupName: 'groupB',
+          properties: ['prop4', 'prop5', 'prop6', 'prop7'],
+          order: 'flexible',
+          emptyLineBefore: 'always',
+        },
+        {
+          groupName: 'groupC',
+          properties: ['prop8', 'prop9', 'prop10'],
+          order: 'flexible',
+          emptyLineBefore: 'always',
+        },
+      ],
+      {},
+    ];
+
+    expect(options).toEqual(expected);
+  });
+
+  it('should correctly apply secondary properties', () => {
+    const options = generateConfig({
+      order: 'flexible',
+      unspecified: 'top',
+      emptyLineBefore: 'always',
+      emptyLineBeforeUnspecified: 'never',
+    });
+
+    const expected = [
+      [
+        {
+          groupName: 'groupA',
+          properties: ['prop1', 'prop2', 'prop3'],
+          order: 'flexible',
+          emptyLineBefore: 'always',
+        },
+        {
+          groupName: 'groupB',
+          properties: ['prop4', 'prop5', 'prop6', 'prop7'],
+          order: 'flexible',
+          emptyLineBefore: 'always',
+        },
+        {
+          groupName: 'groupC',
+          properties: ['prop8', 'prop9', 'prop10'],
+          order: 'flexible',
+          emptyLineBefore: 'always',
+        },
+      ],
       {
-        groupName: 'groupA',
-        properties: ['prop1', 'prop2', 'prop3'],
-        order: 'flexible',
-        emptyLineBefore: 'always',
-      },
-      {
-        groupName: 'groupB',
-        properties: ['prop4', 'prop5', 'prop6', 'prop7'],
-        order: 'flexible',
-        emptyLineBefore: 'always',
-      },
-      {
-        groupName: 'groupC',
-        properties: ['prop8', 'prop9', 'prop10'],
-        order: 'flexible',
-        emptyLineBefore: 'always',
+        unspecified: 'top',
+        emptyLineBeforeUnspecified: 'never',
       },
     ];
 
@@ -72,18 +116,21 @@ describe('generate options', () => {
     });
 
     const expected = [
-      {
-        groupName: 'groupA',
-        properties: ['prop1', 'prop2', 'prop3'],
-      },
-      {
-        groupName: 'groupB',
-        properties: ['prop4', 'prop5', 'prop6', 'prop7'],
-      },
-      {
-        groupName: 'groupC',
-        properties: ['prop8', 'prop9', 'prop10'],
-      },
+      [
+        {
+          groupName: 'groupA',
+          properties: ['prop1', 'prop2', 'prop3'],
+        },
+        {
+          groupName: 'groupB',
+          properties: ['prop4', 'prop5', 'prop6', 'prop7'],
+        },
+        {
+          groupName: 'groupC',
+          properties: ['prop8', 'prop9', 'prop10'],
+        },
+      ],
+      {},
     ];
 
     expect(options).toEqual(expected);
