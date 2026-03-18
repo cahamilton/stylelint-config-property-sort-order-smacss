@@ -12,13 +12,13 @@ type Group = {
 
 /**
  * Options to be applied to each group
- * @see {@link https://github.com/hudochenkov/stylelint-order/blob/7.0.1/rules/properties-order/README.md#options|Documentation}
+ * @see {@link https://github.com/hudochenkov/stylelint-order/blob/8.1.1/rules/properties-order/README.md#options|Documentation}
  */
 type Options = Omit<Group, 'groupName' | 'properties'>;
 
 /**
  * Options to be applied to the configuration
- * @see {@link https://github.com/hudochenkov/stylelint-order/blob/7.0.1/rules/properties-order/README.md#optional-secondary-options|Documentation}
+ * @see {@link https://github.com/hudochenkov/stylelint-order/blob/8.1.1/rules/properties-order/README.md#optional-secondary-options|Documentation}
  */
 type SecondaryOptions = {
   unspecified?: 'top' | 'bottom' | 'bottomAlphabetical' | 'ignore';
@@ -28,7 +28,7 @@ type SecondaryOptions = {
 
 /**
  * Returns configuration for `stylelint-order/properties-order`
- * @see {@link https://github.com/hudochenkov/stylelint-order/blob/7.0.1/rules/properties-order/README.md|Documentation}
+ * @see {@link https://github.com/hudochenkov/stylelint-order/blob/8.1.1/rules/properties-order/README.md|Documentation}
  */
 const generateConfig = (
   options: Options & SecondaryOptions = {},

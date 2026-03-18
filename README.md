@@ -92,7 +92,7 @@ For more information on configuring Stylelint, check out the [configuration](htt
 > [!NOTE]
 > This requires a JavaScript configuration file (eg. `stylelint.config.js`, `stylelint.config.mjs`) and is not supported by JSON, YAML or other file formats.
 
-The basic configuration outlined above, will enforce that properties are **strictly** sorted within their groups (box, border, background etc). Given this configuration makes use of [stylelint-order](https://github.com/hudochenkov/stylelint-order/tree/7.0.1), there's a couple extra bits of functionality that can be configured. This will require manually generating the configuration - but passing in extra options as required. These will be applied to **each** property group.
+The basic configuration outlined above, will enforce that properties are **strictly** sorted within their groups (box, border, background etc). Given this configuration makes use of [stylelint-order](https://github.com/hudochenkov/stylelint-order/tree/8.1.1), there's a couple extra bits of functionality that can be configured. This will require manually generating the configuration - but passing in extra options as required. These will be applied to **each** property group.
 
 ### Options
 
@@ -107,7 +107,7 @@ type Options = {
 };
 ```
 
-Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/7.0.1/rules/properties-order/README.md#options) documentation for more information on available options.
+Refer to the [properties-order](https://github.com/hudochenkov/stylelint-order/blob/8.1.1/rules/properties-order/README.md#options) documentation for more information on available options.
 
 All options except `properties` and `groupName` can be modified.
 
