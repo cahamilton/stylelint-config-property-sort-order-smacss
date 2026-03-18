@@ -9,6 +9,7 @@ on:
 jobs:
   analyze:
     name: Analyze
+    needs: build
     runs-on: ubuntu-latest
 
     strategy:
